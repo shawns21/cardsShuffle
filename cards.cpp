@@ -10,5 +10,4 @@ int main(){
     test.makeCard();
     test.printCards();
 
-
 }
