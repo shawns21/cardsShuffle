@@ -10,8 +10,6 @@ class Cards {
     string numbers[13] = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
     string suits[4] = {"SPADE", "DIAMOND", "HEART", "CLUBS"};
     vector<string> jards;
-    ran1 = rand() % 52;
-    ran2 = rand() % 52;
 
 
     void makeCard() {
@@ -40,8 +38,18 @@ class Cards {
 
     void shuffleCards(){
 
-        swap(cards[ran1], cards[ran2]);
+        srand (time(NULL));
+        for (auto& it : jards) {
+
+        int ran1 = rand() % 52;
+        int ran2 = rand() % 52;
+        swap(jards[ran1], jards[ran2]);
+
+        }
+
 
     }
+
+    
 
 };
